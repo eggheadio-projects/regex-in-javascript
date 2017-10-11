@@ -7,8 +7,7 @@ var str = `800-456-7890
 
 var regex = /\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}/g;
 
-console.log(str.replace(regex, 'area code: $1')) || displayInPreview(str.replace(regex, 'area code: $1'));
-
+console.log(str.replace(regex, 'area code: $1'));
 
 /**
  * @param  String str
@@ -22,13 +21,3 @@ const output = (str, regex, target) => {
     );
 }
 output(str, regex, document.querySelector('pre'));
-
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
