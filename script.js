@@ -6,7 +6,7 @@ var str = `12/1/16
 12-12-2016`;
 var regex = /^12.+16$/gm;
 
-console.log(regex.exec(str)) || displayInPreview(regex.exec(str));
+// console.log(regex.exec(str))
 
 /**
  * @param  String str
@@ -20,12 +20,3 @@ const output = (str, regex, target) => {
     );
 }
 output(str, regex, document.querySelector('pre'));
-
-
-// display in plunker preview
-function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
-  newDiv.appendChild(newContent);
-  document.body.appendChild(newDiv)
-}
